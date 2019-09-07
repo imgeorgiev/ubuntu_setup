@@ -1,8 +1,8 @@
 # xubuntu-setup
-A guide of how to install my Ubuntu config. Mostly for myself as I reinstall machines often.
+A guide of how to install my Ubuntu config which is focused on robotics development with ROS
 
 ## Linux distro
-For most of my projects, I use ROS Kinetic for which bounds me to use Ubuntu LTS 16.04. Unity is ugly and impractical, that's why I use Xubuntu instead. [Download here](https://xubuntu.org/download)
+For most of my projects, I use ROS which bounds me to use Ubuntu. So first install your fav [ubuntu flavour](https://ubuntu.com/download/flavours) and install it.
 
 ## Config files
 - `.bashrc` - place in home
