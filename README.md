@@ -39,7 +39,9 @@ Usually access these through the Nautalis Connect to Server menu
 - `sftp://ssh.inf.ed.ac.uk/afs/inf.ed.ac.uk/user/s15/s1521716` - Uni DICE filesystem
 
 ### Git setup
-Remember to use `git config credential.helper store` to save credentials
+1. Setup [SSH key](https://docs.gitlab.com/ee/ssh/) for gitlab.
+2. Use `git config credential.helper store` to save credentials
+
 
 ### ODrive setup
 Just run ODrive
