@@ -8,5 +8,6 @@ if [ -L "/usr/local/include/eigen3"  ]; then
     exit 1
 fi
 
-git clone https://bitbucket.org/eigen/eigen/ ~/git/
+hg clone https://bitbucket.org/eigen/eigen/ ~/git/eigen
 sudo ln -sf /home/ignat/git/eigen /usr/local/include/eigen3
+
