@@ -8,18 +8,21 @@ fi
 
 printf "\n## installing linux packages ##\n"
 
-apt install -y cifs-utils clipit calibre freecad handbrake redshift-gtk openvpn easy-rsa network-manager-openvpn-gnome kazam jstest-gtk meshlab pinta remmina synergy thunderbird nautilus vim xrdp vino gnome-tweak-tool pdftk terminator nmap python-catkin-tools mercurial
+packages="cifs-utils clipit calibre freecad handbrake redshift-gtk openvpn easy-rsa network-manager-openvpn-gnome kazam jstest-gtk meshlab pinta remmina synergy thunderbird nautilus vim xrdp vino gnome-tweak-tool pdftk terminator nmap python-catkin-tools mercurial"
+
+for pack in $packages; do
+    apt-get install -y $pack
+done
+
+
 
 sudo snap install mailspring odrive-unofficial
 
 
 printf "\n## Installing 3rd party\n"""
-install/install_chrome.sh
-install/install_eigen.sh
-install/install_paper_icons.sh
-install/install_spotify.sh
-install/install_ros_kinetic.sh
-install/install_vscode.sh
+for f in install/*.sh; do  # or wget-*.sh instead of *.sh
+  bash "$f" -H
+done
 
 
 printf "\n## Copying config files##\n"
