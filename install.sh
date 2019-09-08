@@ -16,7 +16,7 @@ done
 
 
 
-sudo snap install mailspring odrive-unofficial
+sudo snap install mailspring
 
 
 printf "\n## Installing 3rd party\n"""
