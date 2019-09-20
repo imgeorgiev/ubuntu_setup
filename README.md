@@ -6,22 +6,18 @@ For most of my projects, I use ROS which bounds me to use Ubuntu. So first insta
 
 ## 2. Install all ubuntu apps
 -Just run the script `install.sh` with sudo to install everything.
-2Otherwise, you are free to install whatever you fancy
-2
+Otherwise, you are free to install whatever you fancy
+
 ## 3. Manually install external apps
 - [CLion](https://www.jetbrains.com/clion/download/#section=linux) - remember to sync settings
 - [PyCharm](https://www.jetbrains.com/pycharm/download/#section=linux) - remember to sync settings		
 - [TeamViewer](https://www.teamviewer.com/en/download/linux/)
-- [Slack](https://slack.com/downloads/linux)
 - [Anaconda](https://www.anaconda.com/download/) - Note that Anaconda has some issues running with ROS. For this purpose remove the path sourcing for it from `.bashrc` and source it only whenever needed. For that purpose I have made a custom command called `start_conda` within the `.custom_commands.bash` file
 - Install VSCode extensions using the Settings Sync extension from the VSCode marketplace
 - [ODrive](https://github.com/liberodark/ODrive/releases)
 
 
 ## 4. Customisations
-### Visual
-- [Arc X Darker Theme](https://gitlab.com/LinxGem33/X-Arc-White) - Can be downloaded as a .deb package which you can simply install. Then you have to change your theme from both the *Apperance* and *Window Manager* apps.
-- [Arc X Icons] - Installed from install scripts folder
 
 ### Keyboard shortcuts
 - File Manager - Super + E
@@ -42,7 +38,3 @@ Usually access these through the Nautalis Connect to Server menu
 ### Git setup
 1. Setup [SSH key](https://docs.gitlab.com/ee/ssh/) for gitlab.
 2. Use `git config credential.helper store` to save credentials
-
-
-### ODrive setup
-Just run ODrive
