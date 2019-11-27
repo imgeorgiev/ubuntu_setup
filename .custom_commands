@@ -22,10 +22,3 @@ function start_conda() {
 
 }
 
-
-# Set up ROS env
-function start_ros() {
-    source /opt/ros/kinetic/setup.bash
-}
-
-

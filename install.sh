@@ -15,7 +15,8 @@ for pack in $packages; do
 done
 
 
-
+# Install packages which are only available via snap
+printf "\n## installing snap packages ##\n"
 sudo snap install mailspring
 
 
@@ -27,7 +28,7 @@ done
 
 printf "\n## Copying config files##\n"
 
-cp -r .bashrc .vimrc .custom_commands.bash .config scripts ~/
+cp -r .bashrc .bash_aliases .vimrc .custom_commands .config scripts ~/
 sudo cp 70-synaptics.conf /usr/share/X11/xorg.conf.d/
 
 printf "\n## Finished install ##\n"

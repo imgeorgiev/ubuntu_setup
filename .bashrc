@@ -117,16 +117,10 @@ if ! shopt -oq posix; then
 fi
 
 # Source custom commands
-if [ -f $HOME/.custom_commands.bash  ]; then
-    source ~/.custom_commands.bash
+if [ -f $HOME/.custom_commands  ]; then
+    source ~/.custom_commands
 fi
 
-# Source ROS
-# source /opt/ros/kinetic/setup.bash
-
-alias clion='/opt/clion/bin/clion.sh'
-alias pycharm='/opt/pycharm/bin/pycharm.sh'
-    
 # Distributed ROS
 # export ROS_MASTER_URI=http://tegraA:11311
 # export ROS_HOSTNAME=192.168.1.180
