@@ -26,9 +26,9 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 sudo apt-get update
 if [ $(lsb_release -sc) = "xenial" ]; then
-    sudo apt-get install ros-kinetic-desktop-full
+    sudo apt-get install -y ros-kinetic-desktop-full
 elif [ $(lsb_release -sc) = "bionic" ]; then
-    sudo apt-get install ros-melodic-desktop-full
+    sudo apt-get install -y ros-melodic-desktop-full
 else
     echo -e "${RED}ERROR could not detect ubuntu version. Only xenial and bionic are supported. Not install ROS${NC}"
 fi;
