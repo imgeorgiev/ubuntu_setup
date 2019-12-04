@@ -126,3 +126,6 @@ fi
 # export ROS_HOSTNAME=192.168.1.180
 # export ROS_IP=192.168.1.180
 
+export PATH=$PATH:/usr/local/cuda/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib:/usr/local/lib
+export CPLUS_INCLUDE_PATH=/usr/local/cuda/include
