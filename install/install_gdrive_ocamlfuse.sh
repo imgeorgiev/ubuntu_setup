@@ -1,11 +1,11 @@
 #!/bin/bash
 
-printf "\nInstalling Chrome\n"
+printf "\nInstalling gdrive\n"
 
 # first check if already installed
-if ! [ $(dpkg-query -W -f='${Status}' google-chrome-stable 2>/dev/null | grep -c "ok installed") -eq 0  ];
+if ! [ $(dpkg-query -W -f='${Status}' google-drive-ocamlfuse 2>/dev/null | grep -c "ok installed") -eq 0  ];
 then
-    echo "Google Chrome already installed. Exitting..."
+    echo "google-drive-ocamlfuse already installed. Exitting..."
     exit 1
 fi
 
