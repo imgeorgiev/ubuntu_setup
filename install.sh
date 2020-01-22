@@ -28,7 +28,7 @@ done
 
 printf "\n## Copying config files##\n"
 
-cp -r .bashrc .bash_aliases .vimrc .custom_commands .config scripts ~/
+cp -r .zshrc .vimrc .custom_commands .config scripts ~/
 sudo cp 70-synaptics.conf /usr/share/X11/xorg.conf.d/
 
 printf "\n## Finished install ##\n"
