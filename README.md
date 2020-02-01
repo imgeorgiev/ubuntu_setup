@@ -15,7 +15,6 @@ Otherwise, you are free to install whatever you fancy
 - [Anaconda](https://www.anaconda.com/download/) - Note that Anaconda has some issues running with ROS. For this purpose remove the path sourcing for it from `.bashrc` and source it only whenever needed. For that purpose I have made a custom command called `start_conda` within the `.custom_commands.bash` file
 - Install VSCode extensions using the Settings Sync extension from the VSCode marketplace
 - [ODrive](https://github.com/liberodark/ODrive/releases)
-- [Make terminal great again](https://maxim-danilov.github.io/make-linux-terminal-great-again/)
 
 
 ## 4. Customisations

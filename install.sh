@@ -17,7 +17,10 @@ done
 
 # Install packages which are only available via snap
 printf "\n## installing snap packages ##\n"
-sudo snap install mailspring
+sudo snap install mailspring blender
+
+printf "\n## installing terminal mod ##\n"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 
 printf "\n## Installing 3rd party\n"""
