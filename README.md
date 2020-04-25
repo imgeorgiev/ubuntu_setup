@@ -5,7 +5,7 @@ A guide of how to install my Ubuntu config which is focused on robotics developm
 For most of my projects, I use ROS which bounds me to use Ubuntu. So first install your fav [ubuntu flavour](https://ubuntu.com/download/flavours) and install it.
 
 ## 2. Install all ubuntu apps
--Just run the script `install.sh` with sudo to install everything.
+-Just run the script `full_install.sh` with sudo to install everything.
 Otherwise, you are free to install whatever you fancy
 
 ## 3. Manually install external apps
