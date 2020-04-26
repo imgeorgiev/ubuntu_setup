@@ -4,7 +4,7 @@
 # python versions. Therefore they must be started one at time when used
 
 # Set up conda environment
-function start_conda() {
+function conda_start() {
     # >>> conda initialize >>>
     # !! Contents within this block are managed by 'conda init' !!
     __conda_setup="$('/home/ignat/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"

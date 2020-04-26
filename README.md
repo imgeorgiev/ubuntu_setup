@@ -1,12 +1,23 @@
 # ubuntu-setup
-A guide of how to install my Ubuntu config which is focused on robotics development with ROS
+A semi-sripted guide of how to install and setup my Ubuntu config focused on robot software development with ROS.
+
+![](img/desktop.png)
 
 ## 1. Linux distro
 For most of my projects, I use ROS which bounds me to use Ubuntu. This repo supports xenial (16) and bionic (18). So first install your favourite [ubuntu flavour](https://ubuntu.com/download/flavours). I personally prefer Kubuntu which strikes a nice balance between eye candy, functionality and speed.
 
 ## 2. Install all ubuntu apps
--Just run the script `full_install.sh` with sudo to install everything.
-Otherwise, you are free to install whatever you fancy
+Run the script `full_install.sh` with sudo to install everything that I have managed to automate. It includes:
+
+- zsh + terminator setup
+- ROS
+- Mailspring email client
+- Google Chrome
+- vim
+- Eigen
+- Spotify
+- VSCode
+- many many small apps and utilities
 
 ## 3. Manually install external apps
 - [CLion](https://www.jetbrains.com/clion/download/#section=linux) - remember to sync settings
@@ -16,6 +27,10 @@ Otherwise, you are free to install whatever you fancy
 - Install VSCode extensions using the Settings Sync extension from the VSCode marketplace
 
 ## 4. Customisations
+
+### Visuals
+I use the [Aritim Dark Theme](https://www.pling.com/p/1281836) installed via the Workspace Theme in the System Setttings. Install it from there and set it along with the "Use desktop layout from theme setting". Next set the icons to La Capitane which you can install from the System Settings. Configure the taskbar to be the same as the screenshot.
+
 ### Keyboard shortcuts
 - File Manager - Super + E
 - Terminal - Ctrl + Alt + T
@@ -26,10 +41,6 @@ Otherwise, you are free to install whatever you fancy
 ### Useful scripts
 - `stop_joy.bash` - when you connect a some joysticks to ubuntu, they start controlling your mouse. This script stops that but allows the joystick to still work as a joystick.
 - `wifi_fix.bash` - on my Dell Latitude E5450, my wifi would sometimes refuse to connect to secure networks. This script fixes it for 1 connection attempt.
-
-### Remote file connections
-Usually access these through the Nautalis Connect to Server menu
-- `sftp://ssh.inf.ed.ac.uk/afs/inf.ed.ac.uk/user/s15/s1521716` - Uni DICE filesystem
 
 ### Git setup
 1. Setup [SSH key](https://docs.gitlab.com/ee/ssh/) for gitlab.

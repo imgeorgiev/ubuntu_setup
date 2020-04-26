@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Start CLion and continue using terminal as normal
+alias clion='nohup /opt/clion/bin/clion.sh &'
+
+# Start PyCharm and continue using terminal as normal
+alias pycharm='nohup /opt/pycharm/bin/pycharm.sh &'
+
+# quick access aliases for workspaces
+alias ros='source /opt/ros/kinetic/setup.zsh'
+alias robo='source ~/RoboraceDriver/devel/setup.zsh && cd ~/RoboraceDriver/'
+alias eufs='source ~/eufs-master/devel/setup.zsh && cd ~/eufs-master/'
+
