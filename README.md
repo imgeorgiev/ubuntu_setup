@@ -33,10 +33,14 @@ I use the [Aritim Dark Theme](https://www.pling.com/p/1281836) installed via the
 
 ### Keyboard shortcuts
 - File Manager - Super + E
-- Terminal - Ctrl + Alt + T
-- Switch workspaces - Ctrl + Alt + Arrow keys
-- Move window to workspace - Super + Arrow keys
-- Switch keyboard layouts - Alt + Shift
+- Global Shortcuts/System Shortcuts/Terminal - Ctrl + Alt + T
+- Global Shortcuts/System Shortcuts/Switch workspaces - Ctrl + Alt + Arrow keys
+- Global Shortcuts/System Shortcuts/Move window to workspace - Super + Alt + Arrow keys
+- Keyboard Settings/Switch keyboard layouts - Alt + Shift
+
+### System settings
+
+- Search/Plasma Search - disable all folder and file related actions
 
 ### Useful scripts
 - `stop_joy.bash` - when you connect a some joysticks to ubuntu, they start controlling your mouse. This script stops that but allows the joystick to still work as a joystick.
