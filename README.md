@@ -2,7 +2,7 @@
 A guide of how to install my Ubuntu config which is focused on robotics development with ROS
 
 ## 1. Linux distro
-For most of my projects, I use ROS which bounds me to use Ubuntu. So first install your fav [ubuntu flavour](https://ubuntu.com/download/flavours) and install it.
+For most of my projects, I use ROS which bounds me to use Ubuntu. This repo supports xenial (16) and bionic (18). So first install your favourite [ubuntu flavour](https://ubuntu.com/download/flavours). I personally prefer Kubuntu which strikes a nice balance between eye candy, functionality and speed.
 
 ## 2. Install all ubuntu apps
 -Just run the script `full_install.sh` with sudo to install everything.
@@ -14,13 +14,10 @@ Otherwise, you are free to install whatever you fancy
 - [TeamViewer](https://www.teamviewer.com/en/download/linux/)
 - [Anaconda](https://www.anaconda.com/download/) - Note that Anaconda has some issues running with ROS. For this purpose remove the path sourcing for it from `.bashrc` and source it only whenever needed. For that purpose I have made a custom command called `start_conda` within the `.custom_commands.bash` file
 - Install VSCode extensions using the Settings Sync extension from the VSCode marketplace
-- [ODrive](https://github.com/liberodark/ODrive/releases)
-
 
 ## 4. Customisations
 ### Keyboard shortcuts
 - File Manager - Super + E
-- Apps Menu - Super + R
 - Terminal - Ctrl + Alt + T
 - Switch workspaces - Ctrl + Alt + Arrow keys
 - Move window to workspace - Super + Arrow keys
@@ -37,3 +34,4 @@ Usually access these through the Nautalis Connect to Server menu
 ### Git setup
 1. Setup [SSH key](https://docs.gitlab.com/ee/ssh/) for gitlab.
 2. Use `git config credential.helper store` to save credentials
+

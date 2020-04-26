@@ -1,3 +1,4 @@
+# Inspired by https://www.reddit.com/r/thinkpad/comments/5rcwlq/heres_how_to_get_the_perfect_trackpoint/
 ACTION=="add",  
 SUBSYSTEM=="input",  
 ATTR{name}=="TPPS/2 IBM TrackPoint",  
