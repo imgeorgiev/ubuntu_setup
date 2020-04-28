@@ -13,6 +13,7 @@ Run the script `full_install.sh` with sudo to install everything that I have man
 - ROS
 - Mailspring email client
 - Google Chrome
+- WPS Office
 - vim
 - Eigen
 - Spotify

@@ -23,7 +23,10 @@ done
 
 # Install packages which are only available via snap
 printf "\n${GREEN}## installing snap packages ##${NC}\n"
-sudo snap install mailspring blender
+snaps="mailspring blender wps-office"
+for pack in $snaps; do
+    sudo snap install $pack
+done
 
 # Install 3rd party packages that are not just fetchable from apt-get
 printf "\n${GREEN}## Installing 3rd party ##${NC}\n"""
@@ -35,7 +38,6 @@ done
 chsh -s $(which zsh) # Change default terminal to zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended # install oh-my-zsh
 echo "emulate sh -c 'source /etc/profile'" | sudo tee -a /etc/zsh/zprofile # add this to make snap apps available to zsh
-
 
 # Copy config files and setups into to right spots
 printf "\n${GREEN}## Copying config files ##${NC}\n"
