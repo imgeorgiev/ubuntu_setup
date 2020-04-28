@@ -30,7 +30,7 @@ Run the script `full_install.sh` with sudo to install everything that I have man
 ## 4. Customisations
 
 ### Visuals
-I use the [Aritim Dark Theme](https://www.pling.com/p/1281836) installed via the Workspace Theme in the System Setttings. Install it from there and set it along with the "Use desktop layout from theme setting". Next set the icons to La Capitane which you can install from the System Settings. Configure the taskbar to be the same as the screenshot.
+I use the [Aritim Dark Theme](https://www.pling.com/p/1281836) installed via the Workspace Theme in the System Setttings. Install it from there and set it along with the "Use desktop layout from theme setting". Next set the icons to La Capitane which you can install from the System Settings. Configure the taskbar to be the same as the screenshot. Finally go to System Settings/Window Management/Task Switcher and set the visualisation to Artim-Dark.
 
 ### Keyboard shortcuts
 - File Manager - Super + E
