@@ -9,7 +9,7 @@ then
     exit 1
 fi
 
-sudo add-apt-repository ppa:alessandro-strada/ppa
+sudo add-apt-repository ppa:alessandro-strada/ppa -y
 sudo apt install google-drive-ocamlfuse
 mkdir ~/gdrive
 
