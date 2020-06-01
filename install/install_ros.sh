@@ -29,6 +29,7 @@ if [ $(lsb_release -sc) = "xenial" ]; then
     sudo apt-get install -y ros-kinetic-desktop-full
 elif [ $(lsb_release -sc) = "bionic" ]; then
     sudo apt-get install -y ros-melodic-desktop-full
+    sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential python-rosdep
 else
     echo -e "${RED}ERROR could not detect ubuntu version. Only xenial and bionic are supported. Not install ROS${NC}"
 fi;
