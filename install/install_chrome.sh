@@ -16,8 +16,8 @@ if [ $(lsb_release -sc) = "xenial" ]; then
     sudo apt-get install google-chrome-stable
 elif [ $(lsb_release -sc) = "bionic" ]; then
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    sudo dpkg –i ./google-chrome-stable_current_amd64.deb
+    sudo dpkg -i ./google-chrome-stable_current_amd64.deb
     rm google-chrome-stable_current_amd64.deb
 else
-     echo -e "${RED}ERROR could not detect ubuntu version. Only xenial and bionic are supported. Not installing Spotify${NC}"
+     echo -e "${RED}ERROR could not detect ubuntu version. Only xenial and bionic are supported. Not installing Chrome${NC}"
 fi;

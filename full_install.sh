@@ -35,7 +35,7 @@ for f in install/*.sh; do  # or wget-*.sh instead of *.sh
 done
 
 # Setup terminal
-chsh -s $(which zsh) # Change default terminal to zsh
+sudo chsh -s $(which zsh) # Change default terminal to zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended # install oh-my-zsh
 echo "emulate sh -c 'source /etc/profile'" | sudo tee -a /etc/zsh/zprofile # add this to make snap apps available to zsh
 
