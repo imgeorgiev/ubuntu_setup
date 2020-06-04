@@ -51,3 +51,20 @@ I use the [Aritim Dark Theme](https://www.pling.com/p/1281836) installed via the
 1. Setup [SSH key](https://docs.gitlab.com/ee/ssh/) for gitlab.
 2. Use `git config credential.helper store` to save credentials
 
+### AMD Ryzen specific setup
+These are issues I had with my Ryzen 7 3700U
+
+#### Fixing system instability
+Need to build and install newest Ryzen kernel from a link I don't have here
+
+#### Fixing suspend bugs
+edit grub
+```bash
+sudo vim /etc/default/grub
+```
+change `GRUB_CMDLINE_LINUX_DEFAULT` to be `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash amd_iommu=off"`
+
+#### Fixing reboot/shutdown issues
+
+Install latest propriotrary Radeon Graphics drivers from the AMD website
+
