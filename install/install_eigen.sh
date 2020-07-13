@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printf "\nInstalling Eigen\n""
+printf "\nInstalling Eigen\n"
 
 # first check if eigen already installed
 if [ -L "/usr/local/include/eigen3"  ]; then
@@ -8,6 +8,5 @@ if [ -L "/usr/local/include/eigen3"  ]; then
     exit 1
 fi
 
-hg clone https://bitbucket.org/eigen/eigen/ ~/git/eigen
+git clone https://gitlab.com/libeigen/eigen ~/git/eigen
 sudo ln -sf /home/ignat/git/eigen /usr/local/include/eigen3
-
