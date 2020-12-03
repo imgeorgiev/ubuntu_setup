@@ -5,7 +5,7 @@ printf "\nInstalling gdrive\n"
 # first check if already installed
 if ! [ $(dpkg-query -W -f='${Status}' google-drive-ocamlfuse 2>/dev/null | grep -c "ok installed") -eq 0  ];
 then
-    echo "google-drive-ocamlfuse already installed. Exitting..."
+    printf "google-drive-ocamlfuse already installed. Exitting...\n\n"
     exit 1
 fi
 

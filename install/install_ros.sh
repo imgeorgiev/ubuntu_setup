@@ -22,16 +22,27 @@ then
     exit 1
 fi
 
+if ! [ $(dpkg-query -W -f='${Status}' ros-noetic-desktop-full 2>/dev/null | grep -c "ok installed") -eq 0  ];
+then
+    echo "ROS Neotic already installed. Exitting..."
+    exit 1
+fi
+
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 sudo apt-get update
 if [ $(lsb_release -sc) = "xenial" ]; then
     sudo apt-get install -y ros-kinetic-desktop-full
+    sudo rosdep init
+    rosdep update
 elif [ $(lsb_release -sc) = "bionic" ]; then
     sudo apt-get install -y ros-melodic-desktop-full
     sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential python-rosdep
+    sudo rosdep init
+    rosdep update
+elif [ $(lsb_release -sc) = "focal" ]; then
+    sudo apt-get install -y ros-noetic-desktop-full
 else
-    echo -e "${RED}ERROR could not detect ubuntu version. Only xenial and bionic are supported. Not install ROS${NC}"
+    printf "${RED}ERROR could not detect ubuntu version. Only xenial and bionic are supported. Not installing ROS\n\n${NC}"
+    exit 1
 fi;
-sudo rosdep init
-rosdep update

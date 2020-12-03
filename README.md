@@ -4,7 +4,7 @@ A semi-sripted guide of how to install and setup my Ubuntu config focused on rob
 ![](img/desktop.png)
 
 ## 1. Linux distro
-For most of my projects, I use ROS which bounds me to use Ubuntu. This repo supports xenial (16) and bionic (18). So first install your favourite [ubuntu flavour](https://ubuntu.com/download/flavours). I personally prefer Kubuntu which strikes a nice balance between eye candy, functionality and speed.
+For most of my projects, I use ROS which bounds me to use Ubuntu. This repo supports xenial (16),  bionic (18) and focal (20). So first install your favourite [ubuntu flavour](https://ubuntu.com/download/flavours). I personally prefer Kubuntu which strikes a nice balance between eye candy, functionality and speed.
 
 ## 2. Install all ubuntu apps
 Run the script `full_install.sh` with sudo to install everything that I have managed to automate. It includes:
@@ -18,13 +18,15 @@ Run the script `full_install.sh` with sudo to install everything that I have man
 - Eigen
 - Spotify
 - VSCode
+- CLion
+- Pycharm
 - many many small apps and utilities
 
 ## 3. Manually install external apps
-- [CLion](https://www.jetbrains.com/clion/download/#section=linux) - remember to sync settings
-- [PyCharm](https://www.jetbrains.com/pycharm/download/#section=linux) - remember to sync settings		
+- CLion - remember to sync settings
+- Pycharm - remember to sync settings		
 - [TeamViewer](https://www.teamviewer.com/en/download/linux/)
-- [Anaconda](https://www.anaconda.com/download/) - Note that Anaconda has some issues running with ROS. For this purpose remove the path sourcing for it from `.bashrc` and source it only whenever needed. For that purpose I have made a custom command called `start_conda` within the `.custom_commands.bash` file
+- [Miniconda](https://docs.conda.io/en/latest/miniconda.html) - Note that Anaconda has some issues running with ROS. For this purpose remove the path sourcing for it from `.bashrc` and source it only whenever needed. For that purpose I have made a custom command called `start_conda` within the `.custom_commands.bash` file
 - Install VSCode extensions using the Settings Sync extension from the VSCode marketplace
 
 ## 4. Customisations

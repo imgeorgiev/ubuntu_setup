@@ -10,7 +10,7 @@ printf "\nInstall Spotify\n"
 # first check if already installed
 if ! [ $(dpkg-query -W -f='${Status}' spotify-client 2>/dev/null | grep -c    "ok installed") -eq 0   ];
 then
-    echo "Spotify already installed. Exitting..."
+    echo "Spotify already installed. Exitting...\n\n"
     exit 1
 fi
 
@@ -20,8 +20,12 @@ if [ $(lsb_release -sc) = "xenial" ]; then
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 elif [ $(lsb_release -sc) = "bionic" ]; then
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 4773BD5E130D1D45
+elif [ $(lsb_release -sc) = "focal" ]; then
+    printf "Spotify is only available on snap for focal. Skipping...\n\n"
+    exit 1
 else
-    echo -e "${RED}ERROR could not detect ubuntu version. Only xenial and bionic are supported. Not installing Spotify${NC}"
+    echo -e "${RED}ERROR could not detect ubuntu version. Only xenial and bionic are supported. Not installing Spotify\n\n${NC}"
+    exit 1
 fi;
 
 # 2. Add the Spotify repository

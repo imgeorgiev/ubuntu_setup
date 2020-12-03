@@ -9,6 +9,11 @@ then
     exit 1
 fi
 
-sudo add-apt-repository -y ppa:snwh/pulp
-sudo apt-get update
-sudo apt-get install paper-icon-theme
+if ! [ $(lsb_release -sc) = "focal" ]; then
+    sudo add-apt-repository -y ppa:snwh/pulp
+    sudo apt-get update
+    sudo apt-get install paper-icon-theme
+    print "\n\n"
+else
+    printf "Skpping... paper-icons not available on focal\n\n"
+fi
