@@ -28,6 +28,7 @@ Run the script `full_install.sh` with sudo to install everything that I have man
 - [TeamViewer](https://www.teamviewer.com/en/download/linux/)
 - [Miniconda](https://docs.conda.io/en/latest/miniconda.html) - Note that Anaconda has some issues running with ROS. For this purpose remove the path sourcing for it from `.bashrc` and source it only whenever needed. For that purpose I have made a custom command called `start_conda` within the `.custom_commands.bash` file
 - Install VSCode extensions using the Settings Sync extension from the VSCode marketplace
+- Install Popcorn time
 
 ## 4. Customisations
 
