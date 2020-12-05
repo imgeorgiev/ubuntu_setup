@@ -6,6 +6,8 @@ alias clion='nohup /opt/clion/bin/clion.sh &'
 # Start PyCharm and continue using terminal as normal
 alias pycharm='nohup /opt/pycharm/bin/pycharm.sh &'
 
+alias please='sudo'
+
 # quick access aliases for workspaces
 alias robo='source ~/RoboraceDriver/devel/setup.zsh && cd ~/RoboraceDriver/'
 alias eufs='source ~/eufs-master/devel/setup.zsh && cd ~/eufs-master/'
@@ -13,6 +15,8 @@ if [ $(lsb_release -sc) = "xenial" ]; then
     alias ros='source /opt/ros/kinetic/setup.zsh'
 elif [ $(lsb_release -sc) = "bionic" ]; then
     alias ros='source /opt/ros/melodic/setup.zsh'
+elif [ $(lsb_release -sc) = "focal" ]; then
+    alias ros='source /opt/ros/neotic/setup.zsh'
 fi;
 
 
