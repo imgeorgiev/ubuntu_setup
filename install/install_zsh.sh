@@ -3,7 +3,7 @@
 printf "\nInstalling zsh\n"
 
 # first check if eigen already installed
-if [ -d "/etc/zsh"  ]; then
+if [ -d "/home/$USER/.oh-my-zsh/oh-my-zsh.sh"  ]; then
     echo "zsh is already insatlled. Exitting..."
     exit 1
 fi

@@ -6,19 +6,13 @@ ORANGE='\033[0;33m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
-# check for sudo rights
-if [ "$(id -u)" != "0"  ]; then
-    echo "${RED}Sorry, you are not root. Please use sudo with this script${NC}"
-    exit 1
-fi
-
 printf "\n${GREEN}## installing linux packages ##${NC}\n"
 
 packages="cifs-utils clipit calibre freecad handbrake openvpn easy-rsa network-manager-openvpn-gnome kazam jstest-gtk meshlab pinta remmina synergy vim xrdp vino gnome-tweak-tool pdftk terminator nmap python-catkin-tools mercurial xclip unetbootin htop git sshpass tree slack transmission-gtk"
 
 for pack in $packages; do
     printf "\n${GREEN}## installing $pack ##${NC}\n"
-    apt-get install -y $pack
+    sudo apt-get install -y $pack
 done
 
 
