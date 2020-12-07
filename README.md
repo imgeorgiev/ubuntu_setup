@@ -17,17 +17,15 @@ Run the script `full_install.sh` with sudo to install everything that I have man
 - vim
 - Eigen
 - Spotify
-- VSCode
-- CLion
-- Pycharm
+- VSCode - remember to sync settings with Settings Sync extension
+- CLion - remember to sync settings
+- Pycharm - remember to sync settings
 - many many small apps and utilities
 
 ## 3. Manually install external apps
-- CLion - remember to sync settings
-- Pycharm - remember to sync settings		
+- [GPU] Install JetPack via the nvidia SDK manager 
 - [TeamViewer](https://www.teamviewer.com/en/download/linux/)
 - [Miniconda](https://docs.conda.io/en/latest/miniconda.html) - Note that Anaconda has some issues running with ROS. For this purpose remove the path sourcing for it from `.bashrc` and source it only whenever needed. For that purpose I have made a custom command called `start_conda` within the `.custom_commands.bash` file
-- Install VSCode extensions using the Settings Sync extension from the VSCode marketplace
 - Install Popcorn time
 
 ## 4. Customisations
@@ -53,6 +51,29 @@ I use the [Aritim Dark Theme](https://www.pling.com/p/1281836) installed via the
 ### Git setup
 1. Setup [SSH key](https://docs.gitlab.com/ee/ssh/) for gitlab.
 2. Use `git config credential.helper store` to save credentials
+
+### Extra Nvidia GPU tweaks
+
+#### Small scaling
+
+issue where some UI elements apear tiny. To fix it:
+
+```bash
+sudo nvidia-config
+sudo nano /etc/X11/xorg.conf 
+```
+
+and add a DPI option to the Monitor settings:
+
+```
+Section "Monitor"
+    Identifier     "Monitor0"
+    Option "DPI"   "96 x 96"
+EndSection
+```
+
+reboot
+
 
 ### AMD Ryzen specific setup
 These are issues I had with my Ryzen 7 3700U
