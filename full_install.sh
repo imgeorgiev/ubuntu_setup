@@ -29,6 +29,9 @@ done
 # Install packages which are only available via snap
 printf "\n${GREEN}## installing classic snap packages ##${NC}\n"
 snaps="clion pycharm-professional blender"
+if [ $(lsb_release -sc) = "focal" ]; then
+    snaps="$snaps slack"
+fi
 for pack in $snaps; do
     sudo snap install $pack --classic
 done
