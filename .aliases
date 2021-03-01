@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # Start CLion and continue using terminal as normal
-alias clion='nohup /opt/clion/bin/clion.sh &'
+alias clion='nohup /snap/clion/current/bin/clion.sh &'
 
 # Start PyCharm and continue using terminal as normal
-alias pycharm='nohup /opt/pycharm/bin/pycharm.sh &'
+alias pycharm='nohup /snap/pycharm-professional/current/bin/pycharm.sh &'
 
 alias please='sudo'
 
@@ -19,4 +19,5 @@ elif [ $(lsb_release -sc) = "focal" ]; then
     alias ros='source /opt/ros/neotic/setup.zsh'
 fi;
 
+alias kpns='conda_start && conda activate kpnsdev && cd ~/depot'
 
