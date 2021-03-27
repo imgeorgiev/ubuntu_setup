@@ -8,7 +8,7 @@ NC='\033[0m' # No Color
 
 printf "\n${GREEN}## installing linux packages ##${NC}\n"
 
-packages="cifs-utils clipit calibre freecad handbrake openvpn easy-rsa network-manager-openvpn-gnome kazam jstest-gtk meshlab pinta remmina synergy vim xrdp vino gnome-tweak-tool pdftk terminator nmap python-catkin-tools mercurial xclip unetbootin htop git sshpass tree slack transmission-gtk curl net-tools"
+packages="cifs-utils clipit calibre freecad handbrake openvpn easy-rsa network-manager-openvpn-gnome kazam jstest-gtk meshlab pinta remmina synergy vim xrdp vino gnome-tweak-tool pdftk terminator nmap python-catkin-tools mercurial xclip unetbootin htop git sshpass tree slack transmission-gtk curl net-tools bat"
 
 for pack in $packages; do
     printf "\n${GREEN}## installing $pack ##${NC}\n"
