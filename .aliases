@@ -9,15 +9,29 @@ alias pycharm='nohup /snap/pycharm-professional/current/bin/pycharm.sh &'
 alias please='sudo'
 
 # quick access aliases for workspaces
-alias robo='source ~/RoboraceDriver/devel/setup.zsh && cd ~/RoboraceDriver/'
+alias roborace='source ~/RoboraceDriver/devel/setup.zsh && cd ~/RoboraceDriver/'
 alias eufs='source ~/eufs-master/devel/setup.zsh && cd ~/eufs-master/'
-if [ $(lsb_release -sc) = "xenial" ]; then
-    alias ros='source /opt/ros/kinetic/setup.zsh'
-elif [ $(lsb_release -sc) = "bionic" ]; then
-    alias ros='source /opt/ros/melodic/setup.zsh'
-elif [ $(lsb_release -sc) = "focal" ]; then
-    alias ros='source /opt/ros/neotic/setup.zsh'
-fi;
-
 alias kpns='conda_start && conda activate kpnsdev && cd ~/depot'
 
+# ROS version founder and automatic sourcing
+if [ -d "/opt/ros/kinetic" ]; then
+    alias ros='source /opt/ros/kinetic/setup.zsh'
+elif [ -d "/opt/ros/melodic" ]; then
+    alias ros='source /opt/ros/melodic/setup.zsh'
+elif [ -d "/opt/ros/noetic" ]; then
+    alias ros='source /opt/ros/neotic/setup.zsh'
+else
+    echo "Error: ROS not found. Sourcing command not available. Try fixing in `realpath $0`"
+fi;
+
+# ROS2 version founder and automatic sourcing
+if [ -d "/opt/ros/galactic" ]; then
+    alias ros2='source /opt/ros/galactic/setup.zsh'
+elif [ -d "/opt/ros/foxy" ]; then
+    alias ros2='source /opt/ros/foxy/setup.zsh'
+else
+    echo "Error: ROS2 not found. Sourcing command not available. Try fixing in `realpath $0`"
+fi;
+
+# Cyclone DDS customer settings sourcer
+alias cyclone='export CYCLONEDDS_URI=/home/ignat/cyclonedds.xml'
