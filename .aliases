@@ -19,7 +19,7 @@ if [ -d "/opt/ros/kinetic" ]; then
 elif [ -d "/opt/ros/melodic" ]; then
     alias ros='source /opt/ros/melodic/setup.zsh'
 elif [ -d "/opt/ros/noetic" ]; then
-    alias ros='source /opt/ros/neotic/setup.zsh'
+    alias ros='source /opt/ros/noetic/setup.zsh'
 else
     echo "Error: ROS not found. Sourcing command not available. Try fixing in `realpath $0`"
 fi;
