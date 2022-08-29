@@ -8,7 +8,7 @@ NC='\033[0m' # No Color
 
 printf "\n${GREEN}## installing linux packages ##${NC}\n"
 
-packages="cifs-utils clipit calibre freecad handbrake openvpn easy-rsa network-manager-openvpn-gnome kazam jstest-gtk meshlab pinta vim xrdp gnome-tweak-tool gnome-tweaks pdftk terminator nmap python-catkin-tools xclip unetbootin htop git sshpass tree transmission-gtk curl net-tools bat blender"
+packages="cifs-utils clipit calibre freecad handbrake openvpn easy-rsa network-manager-openvpn-gnome kazam jstest-gtk meshlab pinta vim xrdp gnome-tweak-tool gnome-tweaks pdftk terminator nmap python-catkin-tools xclip unetbootin htop git sshpass tree transmission-gtk curl net-tools bat blender latte-dock"
 
 failed=""
 
