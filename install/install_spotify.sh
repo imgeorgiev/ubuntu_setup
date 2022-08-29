@@ -5,12 +5,12 @@ ORANGE='\033[0;33m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
-printf "\nInstall Spotify\n"
+printf "\nInstalling Spotify\n"
 
 # first check if already installed
-if ! [ $(dpkg-query -W -f='${Status}' spotify-client 2>/dev/null | grep -c    "ok installed") -eq 0   ];
+if ! [ $(dpkg-query -W -f='${Status}' spotify-client 2>/dev/null | grep -c    "ok installed") -eq 0 ] || [  $(snap list | grep spotify | grep -c "spotify") -eq 1 ] ;
 then
-    echo "Spotify already installed. Exitting...\n\n"
+    printf "Spotify already installed. Exitting...\n\n"
     exit 1
 fi
 
@@ -20,8 +20,8 @@ if [ $(lsb_release -sc) = "xenial" ]; then
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 elif [ $(lsb_release -sc) = "bionic" ]; then
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 4773BD5E130D1D45
-elif [ $(lsb_release -sc) = "focal" ]; then
-    printf "Spotify is only available on snap for focal. Skipping...\n\n"
+elif [ $(lsb_release -sc) = "focal" ] || [ $(lsb_release -sc) = "jammy" ]; then
+    printf "Spotify is only available on snap for focal and jammy. Skipping...\n\n"
     exit 1
 else
     echo -e "${RED}ERROR could not detect ubuntu version. Only xenial and bionic are supported. Not installing Spotify\n\n${NC}"

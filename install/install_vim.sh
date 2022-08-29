@@ -3,9 +3,9 @@
 printf "\nInstalling Ultimate VIM\n"
 
 # first check if vim ultimate is already installed
-if [ -d "/root/.vim_runtime"  ]; then
+if test -e ~/.vim_runtime ; then
     printf "Ultimate VIM is already insatlled. Exitting...\n\n"
-    exit 1
+    exit 0
 fi
 
 

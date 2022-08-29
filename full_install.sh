@@ -8,18 +8,32 @@ NC='\033[0m' # No Color
 
 printf "\n${GREEN}## installing linux packages ##${NC}\n"
 
-packages="cifs-utils clipit calibre freecad handbrake openvpn easy-rsa network-manager-openvpn-gnome kazam jstest-gtk meshlab pinta remmina synergy vim xrdp vino gnome-tweak-tool pdftk terminator nmap python-catkin-tools mercurial xclip unetbootin htop git sshpass tree slack transmission-gtk curl net-tools bat"
+packages="cifs-utils clipit calibre freecad handbrake openvpn easy-rsa network-manager-openvpn-gnome kazam jstest-gtk meshlab pinta vim xrdp gnome-tweak-tool gnome-tweaks pdftk terminator nmap python-catkin-tools xclip unetbootin htop git sshpass tree transmission-gtk curl net-tools bat blender"
+
+failed=""
 
 for pack in $packages; do
-    printf "\n${GREEN}## installing $pack ##${NC}\n"
-    sudo apt-get install -y $pack
+    printf "installing $pack..."
+    if sudo apt-get install -y $pack > /dev/null ; then
+        printf "success"
+    else
+        printf "failed"
+        failed="$failed $pack"
+    fi
+    printf "\n"
 done
+
+if [ -z "$failed" ]; then
+    printf "${GREEN}All packages installed succesfully${NC}\n"
+else
+    printf "${RED}The following packages failed: $failed ${NC}\n"
+fi
 
 
 # Install packages which are only available via snap
 printf "\n${GREEN}## installing snap packages ##${NC}\n"
-snaps="mailspring wps-office"
-if [ $(lsb_release -sc) = "focal" ]; then
+snaps="mailspring wps-office slack"
+if [ $(lsb_release -sc) = "focal" ] || [ $(lsb_release -sc) = "jammy" ]; then
     snaps="$snaps spotify"
 fi
 for pack in $snaps; do
@@ -28,10 +42,7 @@ done
 
 # Install packages which are only available via snap
 printf "\n${GREEN}## installing classic snap packages ##${NC}\n"
-snaps="clion pycharm-professional blender"
-if [ $(lsb_release -sc) = "focal" ]; then
-    snaps="$snaps slack"
-fi
+snaps="clion pycharm-professional"
 for pack in $snaps; do
     sudo snap install $pack --classic
 done
@@ -48,7 +59,7 @@ cp -r .zshrc .vimrc .custom_commands .aliases .config scripts ~/
 
 # Trackpoint config file that makes it usable on thinkpads
 if ! [ $(lsb_release -sc) = "focal" ]; then
-    sudo cp config/10-trackpoint.rules /etc/udev/rules.d/
+    sudo cp configs/10-trackpoint.rules /etc/udev/rules.d/
 fi
 
 printf "\n${GREEN}## Finished install ##${NC}\n"
