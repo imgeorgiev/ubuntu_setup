@@ -1,0 +1,14 @@
+[PlasmaRunnerManager]
+migrated=true
+
+[Plugins]
+DictionaryEnabled=false
+baloosearchEnabled=false
+bookmarksEnabled=false
+browserhistoryEnabled=false
+browsertabsEnabled=false
+helprunnerEnabled=false
+katesessionsEnabled=false
+locationsEnabled=false
+placesEnabled=false
+recentdocumentsEnabled=false
